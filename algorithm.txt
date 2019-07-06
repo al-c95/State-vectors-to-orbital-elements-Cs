@@ -1,0 +1,171 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace state_vectors_to_orbital_elements_algorithm
+{
+    class Program
+    {
+        //main program loop
+        static void Main(string[] args)
+        {
+            //Newton's gravitational parameter
+            const double G = 6.67408e-11;
+
+            //Mass of central body
+            double M = 5.97e24;
+
+            //standard gravitational parameter
+            double mu = G * M;
+
+            //state vectors
+            double[] R = { -2337000, 5167000, 3989000 };
+            double[] R_dot = { -7144, 2021, -1567 };
+
+            //orbital angular momentum vector h_vec
+            double[] h = new double[3];
+
+            //eccentricity vector e_vec
+            double[] e = new double[3];
+
+            //eccentricity e
+            double e_mag;
+
+            //LAN vector
+            double[] n = new double[3];
+
+            //True anomaly nu
+            double nu;
+
+            //Orbital inclination i
+            double inc;
+
+            //Eccentric anomaly E
+            double E;
+
+            //Mean anomaly M
+            double MA;
+
+            //Longitude of ascending node LAN
+            double LAN;
+
+            //argument of periapsis
+            double omega;
+
+            //semi-major axis
+            double a;
+
+            //period T (sec)
+            double T;
+
+            //calculate h_vec
+            crossProduct3(R, R_dot, h);
+
+            //calculate R_dotxh vector
+            double[] R_dotCrossh = new double[3];
+            crossProduct3(R_dot, h, R_dotCrossh);
+            for (int i = 0; i < 3; i++)
+            {
+                R_dotCrossh[i] = R_dotCrossh[i] / mu;
+            }
+
+            //Calculate magnitude of position vector R_mag
+            double R_mag = vecMag3(R);
+
+            //calculate eccentricity vector
+            e[0] = R_dotCrossh[0] - (R[0] / R_mag);
+            e[1] = R_dotCrossh[1] - (R[1] / R_mag);
+            e[2] = R_dotCrossh[2] - (R[2] / R_mag);
+
+            //calculate eccentricity e
+            e_mag = vecMag3(e);
+
+            //calculate LAN vector
+            n[0] = -h[1];
+            n[1] = h[0];
+            n[2] = 0;
+
+            //calculate true anomaly nu (degrees)
+            if (dotProduct3(R,R_dot) >= 0)
+            {
+                nu = (180/Math.PI)*Math.Acos(dotProduct3(e,R)/(e_mag*R_mag));
+            }
+            else
+            {
+                nu = (180/Math.PI)*(2*(Math.PI)-Math.Acos(dotProduct3(e, R) / (e_mag * R_mag)));
+            }
+
+            //calculate orbital inclination i
+            inc = (180/Math.PI)*Math.Acos(h[2]/vecMag3(h));
+            
+            //problem
+            //calculate eccentric anomaly E
+            E = Math.Atan( (Math.Sqrt(1-e_mag*e_mag)*Math.Sin(nu * (Math.PI) / 180))/(e_mag+Math.Cos(nu * (Math.PI) / 180) ));
+            //calculate mean anomaly M
+            MA = (180/Math.PI)*(E - e_mag * Math.Sin(E));
+
+            //calculate longitude of ascending node LAN
+            if (n[1] >= 0)
+            {
+                LAN = (180/Math.PI)*Math.Acos(n[0]/vecMag3(n));
+            }
+            else
+            {
+                LAN = (180/Math.PI)*2*Math.PI-Math.Acos(n[0] / vecMag3(n));
+            }
+
+            //calculate argument of periapsis omega
+            if (e[2] >= 0)
+            {
+                omega = (180/Math.PI)*Math.Acos(dotProduct3(n,e)/(vecMag3(n)*e_mag));
+            }
+            else
+            {
+                omega = (180/Math.PI)*(2*Math.PI-Math.Acos(dotProduct3(n, e)/(vecMag3(n)*e_mag)));
+            }
+
+            //calculate semi-major axis
+            a = 1 / (2/R_mag-(vecMag3(R_dot)*(vecMag3(R_dot)/mu)));
+
+            //calculate period T (sec)
+            T = Math.Sqrt(4*(Math.PI)*(Math.PI)*a*a*a/(G*M));
+            
+            Console.WriteLine("Eccentricity, e: " + e_mag);
+            Console.WriteLine("True anomaly, nu: " + nu);
+            Console.WriteLine("Argument of periapsis, omega: " + omega);
+            Console.WriteLine("Eccentric anomlay, E: " + E);
+            Console.WriteLine("Mean anomaly, M: " + MA);
+            Console.WriteLine("Orbital inclination, i: " + inc);
+            Console.WriteLine("Semi-major axis, a: " + a);
+            Console.WriteLine("Longitude of ascending node, Omega: " + LAN);
+            Console.WriteLine("Period, T: " + T);
+            Console.Read();
+        }
+
+        //Magnitude of a vector
+        public static double vecMag3(double []vec)
+        {
+            double result;
+            result = Math.Sqrt(vec[0] * vec[0] + vec[1] * vec[1] + vec[2] * vec[2]);
+            return result;
+        }
+
+        //Dot product of two vectors with three elements each
+        public static double dotProduct3(double []a, double []b)
+        {
+            double result;
+            result = a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+            return result;
+        }
+
+        //Cross product of two vectors with three elements each
+        public static void crossProduct3(double []a, double []b, double []cross_product)
+        {
+            cross_product[0] = a[1] * b[2] - a[2] * b[1];
+            cross_product[1] = -(a[0] * b[2] - a[2] * b[0]);
+            cross_product[2] = a[0] * b[1] - a[1] * b[0];
+        }
+    }
+}

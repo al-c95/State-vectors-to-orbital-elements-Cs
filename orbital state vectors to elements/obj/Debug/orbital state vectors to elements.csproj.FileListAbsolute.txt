@@ -1,0 +1,30 @@
+C:\Users\Alex\Desktop\orbital state vectors to elements\orbital state vectors to elements\bin\Debug\orbital state vectors to elements.exe.config
+C:\Users\Alex\Desktop\orbital state vectors to elements\orbital state vectors to elements\bin\Debug\orbital state vectors to elements.exe
+C:\Users\Alex\Desktop\orbital state vectors to elements\orbital state vectors to elements\bin\Debug\orbital state vectors to elements.pdb
+C:\Users\Alex\Desktop\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.csprojAssemblyReference.cache
+C:\Users\Alex\Desktop\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital_state_vectors_to_elements.main_form.resources
+C:\Users\Alex\Desktop\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital_state_vectors_to_elements.Properties.Resources.resources
+C:\Users\Alex\Desktop\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.csproj.GenerateResource.cache
+C:\Users\Alex\Desktop\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.exe
+C:\Users\Alex\Desktop\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.pdb
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements\orbital state vectors to elements\bin\Debug\orbital state vectors to elements.exe.config
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements\orbital state vectors to elements\bin\Debug\orbital state vectors to elements.exe
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements\orbital state vectors to elements\bin\Debug\orbital state vectors to elements.pdb
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.csprojAssemblyReference.cache
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital_state_vectors_to_elements.main_form.resources
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital_state_vectors_to_elements.Properties.Resources.resources
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.csproj.GenerateResource.cache
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.exe
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.pdb
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements C#\orbital state vectors to elements\bin\Debug\orbital state vectors to elements.exe.config
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements C#\orbital state vectors to elements\bin\Debug\orbital state vectors to elements.exe
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements C#\orbital state vectors to elements\bin\Debug\orbital state vectors to elements.pdb
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements C#\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.csprojAssemblyReference.cache
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements C#\orbital state vectors to elements\obj\Debug\orbital_state_vectors_to_elements.main_form.resources
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements C#\orbital state vectors to elements\obj\Debug\orbital_state_vectors_to_elements.Properties.Resources.resources
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements C#\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.csproj.GenerateResource.cache
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements C#\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements C#\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.exe
+C:\Users\Alex\Desktop\programming projects\orbital state vectors to elements C#\orbital state vectors to elements\obj\Debug\orbital state vectors to elements.pdb

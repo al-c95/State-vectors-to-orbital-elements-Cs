@@ -60,4 +60,5 @@ orbital state vectors to elements.csprojAssemblyReference.cache
 orbital state vectors to elements.exe
 orbital state vectors to elements.pdb
 orbital_state_vectors_to_elements.Properties.Resources.resources
+orbital_state_vectors_to_elements.main_form.resources
 ```

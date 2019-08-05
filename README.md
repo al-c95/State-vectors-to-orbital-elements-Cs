@@ -13,6 +13,7 @@ describing the ellipse which the orbit forms. This application is designed to co
 Requirements
 ------------
 .NET Framework 4.6.1
+Windows 7 SP1 or later
 
 File list
 ---------

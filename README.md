@@ -2,7 +2,7 @@
 
 Author
 ------
-Alex Chlabicz
+Me
 
 Description
 -----------
